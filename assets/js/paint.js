@@ -3,8 +3,8 @@ function configureListeners() {
 
 
     for (var i = 0; i < images.length; i++) {        
-        document.getElementById(images[i].id).addEventListener('mouseover')
-        document.getElementById(images[i].id).addEventListener('mouseout') // iterate over images and add mouseover event listeners      
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false) // iterate over images and add mouseover event listeners      
     } 
 }
 
@@ -50,28 +50,28 @@ function getProductInfo(paintColor) {
             updatePrice(colorName, price)
             break;   
         case 'pn4':
-            price = '$4.99'
-            colorName = 'Solid Black'
-            updatePrice(colorName, price)
-            break;   
-        case 'pn5':
-            price = '$8.22'
-            colorName = 'Solid Cyan'
-            updatePrice(colorName, price)
-            break;   
-        case 'pn6':
-            price = '$11.99'
-            colorName = 'Solid Purple'
-            updatePrice(colorName, price)
-            break;   
-        case 'pn7':
             price = '$13.42'
             colorName = 'Solid Red'
             updatePrice(colorName, price)
             break;   
-        case 'pn8':
+        case 'pn5':
             price = '$21.98'
             colorName = 'Solid White'
+            updatePrice(colorName, price)
+            break;   
+        case 'pn6':
+            price = '$4.99'
+            colorName = 'Solid Black'
+            updatePrice(colorName, price)
+            break;   
+        case 'pn7':
+            price = '$8.22'
+            colorName = 'Solid Cyan'
+            updatePrice(colorName, price)
+            break;   
+        case 'pn8':
+            price = '$11.99'
+            colorName = 'Solid Purple'
             updatePrice(colorName, price)
             break;   
         case 'pn9':
